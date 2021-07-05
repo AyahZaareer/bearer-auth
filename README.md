@@ -7,7 +7,7 @@
 [URL]()
 
 ## Pull Request:
-[URL]()
+[URL](https://github.com/AyahZaareer/bearer-auth/pull/1)
 
 ## Setup:
 1.clone the repo.
