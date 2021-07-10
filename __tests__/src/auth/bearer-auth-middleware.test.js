@@ -12,10 +12,10 @@ let users = {
 };
 
 // Pre-load our database with fake users
-beforeAll(async (done) => {
-  await new Users(users.admin).save();
-  done();
-});
+// beforeAll(async (done) => {
+//   await new Users(users.admin).save();
+//   done();
+// });
 
 describe('Auth Middleware', () => {
 
@@ -24,7 +24,7 @@ describe('Auth Middleware', () => {
   const res = {
     status: jest.fn(() => res),
     send: jest.fn(() => res)
-  }
+  };
   const next = jest.fn();
 
   describe('user authentication', () => {
@@ -43,11 +43,12 @@ describe('Auth Middleware', () => {
 
     });
 
-    it('logs in a user with a proper token', () => {
+    it('logs in a user with a proper token', async () => {
 
       const user = { username: 'admin' };
       const token = jwt.sign(user, process.env.SECRET);
-
+      const userTest = await new Users(users.admin).save();
+      console.log('userTest', userTest);
       req.headers = {
         authorization: `Bearer ${token}`,
       };
