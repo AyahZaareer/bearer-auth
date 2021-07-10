@@ -7,7 +7,7 @@
 [URL](https://ayah-bearer-auth.herokuapp.com)
 
 ## Pull Request:
-[URL](https://github.com/AyahZaareer/bearer-auth/pull/3)
+[URL](https://github.com/AyahZaareer/bearer-auth/pull/4)
 
 ## Setup:
 1.clone the repo.
